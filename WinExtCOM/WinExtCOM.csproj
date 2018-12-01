@@ -59,5 +59,8 @@
   <ItemGroup>
     <None Include="WinExtCOM.snk" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Текст модуля 1С.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
