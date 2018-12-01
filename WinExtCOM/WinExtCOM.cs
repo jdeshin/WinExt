@@ -78,7 +78,7 @@ namespace WinExtCOM
         {
             get
             {
-                return _screenFragment == null;
+                return _screenFragment != null;
             }
         }
 
