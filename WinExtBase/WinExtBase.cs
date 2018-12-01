@@ -10,7 +10,7 @@ namespace WinExtBase
     {
         // Отправка нажатий
         private MSSendKeysBase _sendkeys;
-        MSSendKeysBase MSSendKeys
+        public MSSendKeysBase MSSendKeys
         {
             get
             {
@@ -20,7 +20,7 @@ namespace WinExtBase
 
         // Работа с мышью
         private MouseBase _mouse;
-        MouseBase Mouse
+        public MouseBase Mouse
         {
             get
             {
@@ -30,7 +30,7 @@ namespace WinExtBase
 
         // работа с окнами
         private WorkWithWindowsBase _window;
-        WorkWithWindowsBase WorkWithWindows
+        public WorkWithWindowsBase WorkWithWindows
         {
             get
             {
@@ -40,7 +40,7 @@ namespace WinExtBase
         
         // работа с текстом
         private WorkWithTextBase _text;
-        WorkWithTextBase WorkWithText
+        public WorkWithTextBase WorkWithText
         {
             get
             {
@@ -50,15 +50,19 @@ namespace WinExtBase
         
         // работа с экраном
         private ScreenBase _screen;
-        ScreenBase Screen
+        public ScreenBase Screen
         {
             get
             {
                 return _screen;
             }
         }
-
-        WinExtBase()
+        
+        public void Sleep(int milliseconds)
+        {
+            System.Threading.Thread.Sleep(milliseconds);
+        }
+        public WinExtBase()
         {
             _sendkeys = new MSSendKeysBase();
             _mouse = new MouseBase();
